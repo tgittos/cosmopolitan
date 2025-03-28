@@ -67,7 +67,7 @@ THIRD_PARTY_CMAKE_OBJS = $(THIRD_PARTY_CMAKE_SRCS:%.c=o/$(MODE)/%.o)
 o/$(MODE)/third_party/cmake/bootstrap:
 	mkdir -p third_party/cmake/build/$(MODE)
 	cd third_party/cmake/build/$(MODE) && 		\
-	CC=$(CC) CXX=$(CXX) CFLAGS=$(CFLAGS) CXXFLAGS=$(CXXFLAGS) LDFLAGS=$(LDFLAGS) ../../bootstrap
+	CC="$(PWD)/$(CC) -I$(PWD)/.cosmocc/current/include -L$(PWD)/.cosmoscc/current/lib" CXX="$(PWD)/$(CXX)" ../bootstrap
 
 .PHONY: o/$(MODE)/third_party/cmake
 o/$(MODE)/third_party/cmake:				\
