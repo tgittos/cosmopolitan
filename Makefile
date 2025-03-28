@@ -334,6 +334,7 @@ include tool/build/lib/BUILD.mk
 include third_party/chibicc/BUILD.mk
 include third_party/chibicc/test/BUILD.mk
 include third_party/python/BUILD.mk
+include third_party/cmake/BUILD.mk
 include tool/build/BUILD.mk
 include tool/curl/BUILD.mk
 include third_party/qemu/BUILD.mk
